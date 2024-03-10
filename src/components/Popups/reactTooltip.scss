@@ -1,0 +1,39 @@
+/* Tooltip.css */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 200px; /* Maximum width for the tooltip */
+  width: calc(100vw - 20px); /* Adjust padding as needed */
+  white-space: nowrap;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+//arrow
+// .tooltip::before {
+//   content: "";
+//   position: absolute;
+//   top: -5px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   border-style: solid;
+//   border-width: 0 5px 5px 5px;
+//   border-color: transparent transparent #333 transparent;
+// }

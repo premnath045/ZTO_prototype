@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "lib": ["DOM", "ES6"],
+    "types": [ "node" ],
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/Pages/Briefs/EditBrief.js", "src/Pages/Briefs/PricingTable/PricingTable.js", "src/components/Modals/SimpleModal.js"],
+  "exclude": ["node_modules", "src/Pages/Briefs/EditBriefFrom.tsx"]
+}

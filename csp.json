@@ -1,0 +1,204 @@
+{
+  "stage": {
+    "default-src": ["'self'", "https://wltim-stage.pcstaging.in"],
+    "style-src": [
+      "'self'",
+      "'unsafe-inline'",
+      "https://fonts.googleapis.com",
+      "https://cdn.jsdelivr.net",
+      "https://vjs.zencdn.net",
+      "https://accounts.google.com"
+    ],
+    "frame-src": ["'self'", "*.wltim-stage.pcstaging.in", "https://accounts.google.com/", "https://forms.clickup.com/"],
+    "connect-src": [
+      "wss://wltim-stage.pcstaging.in",
+      "wss://wltim-stage.pcstaging.in/socket.io",
+      "wss://wltim-stage.pcstaging.in.com:3001",
+      "ws://wltim-stage.pcstaging.in.com:3001",
+      "*.wltim-stage.pcstaging.in",
+      "*.wltim-stage.pcstaging.in/socket.io",
+      "https://*.clarity.ms",
+      "https://maps.googleapis.com/",
+      "https://www.googletagmanager.com/*",
+      "https://www.google-analytics.com/",
+      "wss://*.sendbird.com",
+      "https://*.sendbird.com",
+      "https://*.liveblocks.io",
+      "wss://*.liveblocks.io",
+      "https://*.weavy.io",
+      "wss://*.weavy.io"
+    ],
+    "base-uri": ["'self'"],
+    "img-src": [
+      "'self'",
+      "data:",
+      "https://purecatamphetamine.github.io",
+      "https://maps.gstatic.com/",
+      "https://storage.cloud.google.com/",
+      "https://twemoji.maxcdn.com/",
+      "https://cdn.jsdelivr.net",
+      "https://www.googletagmanager.com/*"
+    ],
+    "script-src": [
+      "'self'",
+      "'unsafe-inline'",
+      "https://vjs.zencdn.net",
+      "blob:",
+      "https://content.jwplatform.com",
+      "https://maps.googleapis.com",
+      "https://accounts.google.com",
+      "https://*.weavy.io",
+      "https://www.googletagmanager.com/*",
+      "https://www.googletagmanager.com",
+      "https://www.clarity.ms/*",
+      "https://www.clarity.ms",
+      "https://*.clarity.ms"
+    ],
+    "font-src": [
+      "'self'",
+      "data:",
+      "https://fonts.gstatic.com",
+      "https://cdn.jsdelivr.net"
+    ],
+    "media-src": [
+      "'self'",
+      "*.wltim-stage.pcstaging.in"
+    ],
+    "upgrade-insecure-requests": ""
+  },
+  "demo": {
+    "default-src": ["'self'", "*.wltim-stage.pcstaging.in", "https:wltim-stage.pcstaging.in"],
+    "style-src": [
+      "'self'",
+      "https://fonts.googleapis.com",
+      "https://cdn.jsdelivr.net",
+      "https://vjs.zencdn.net",
+      "'unsafe-inline'",
+      "https://accounts.google.com"
+    ],
+    "frame-src": ["'self'", "*.wltim-stage.pcstaging.in", "https://accounts.google.com/", "https://forms.clickup.com/"],
+    "connect-src": [
+      "wss://wltim-stage.pcstaging.in",
+      "wss://wltim-stage.pcstaging.in/socket.io",
+      "wss://wltim-stage.pcstaging.in:3001",
+      "ws://wltim-stage.pcstaging.in:3001",
+      "wss://*.wltim-stage.pcstaging.in",
+      "*.wltim-stage.pcstaging.in",
+      "*.wltim-stage.pcstaging.in/socket.io",
+      "https://maps.googleapis.com/",
+      "https://www.google-analytics.com/",
+      "https://*.liveblocks.io",
+      "https://*.clarity.ms",
+      "https://maps.googleapis.com/",
+      "https://www.googletagmanager.com/*",
+      "wss://*.liveblocks.io",
+      "https://*.weavy.io",
+      "wss://*.weavy.io"
+    ],
+    "base-uri": ["'self'"],
+    "img-src": [
+      "'self'",
+      "data:",
+      "https://purecatamphetamine.github.io",
+      "https://maps.gstatic.com/",
+      "https://storage.cloud.google.com/",
+      "https://twemoji.maxcdn.com/",
+      "https://cdn.jsdelivr.net",
+      "https://www.googletagmanager.com/*"
+    ],
+    "script-src": [
+      "'self'",
+      "'unsafe-inline'",
+      "https://vjs.zencdn.net",
+      "blob:",
+      "https://content.jwplatform.com",
+      "https://maps.googleapis.com",
+      "https://accounts.google.com",
+      "https://*.weavy.io",
+      "https://www.googletagmanager.com/*",
+      "https://www.googletagmanager.com",
+      "https://www.clarity.ms/*",
+      "https://www.clarity.ms",
+      "https://*.clarity.ms"
+    ],
+    "font-src": [
+      "'self'",
+      "data:",
+      "https://fonts.gstatic.com",
+      "https://cdn.jsdelivr.net"
+    ],
+    "media-src": [
+      "'self'",
+      "*.wltim-stage.pcstaging.in"
+    ],
+    "upgrade-insecure-requests": ""
+  },
+  "prod": {
+    "default-src": ["'self'", "https://wltim-stage.pcstaging.in"],
+    "style-src": [
+      "'self'",
+      "https://fonts.googleapis.com",
+      "https://cdn.jsdelivr.net",
+      "https://vjs.zencdn.net",
+      "'unsafe-inline'",
+      "https://accounts.google.com"
+    ],
+    "frame-src": ["'self'", "*.wltim-stage.pcstaging.in", "https://accounts.google.com/", "https://forms.clickup.com/"],
+    "connect-src": [
+      "wss://wltim-stage.pcstaging.in",
+      "wss://wltim-stage.pcstaging.in/socket.io",
+      "wss://wltim-stage.pcstaging.in:3001",
+      "ws://wltim-stage.pcstaging.in:3001",
+      "*.wltim-stage.pcstaging.in",
+      "*.wltim-stage.pcstaging.in/socket.io",
+      "https://www.clarity.ms",
+      "https://*.clarity.ms",
+      "https://maps.googleapis.com/",
+      "https://www.google-analytics.com/",
+      "https://www.googletagmanager.com/*",
+      "https://*.liveblocks.io",
+      "wss://*.liveblocks.io",
+      "https://*.weavy.io",
+      "wss://*.weavy.io"
+    ],
+    "base-uri": ["'self'"],
+    "img-src": [
+      "'self'",
+      "data:",
+      "https://purecatamphetamine.github.io",
+      "https://*.clarity.ms",
+      "https://maps.gstatic.com/",
+      "https://storage.cloud.google.com/",
+      "https://*.bing.com/*",
+      "https://www.googletagmanager.com/*"
+
+    ],
+    "script-src": [
+      "'self'",
+      "'unsafe-inline'",
+      "https://vjs.zencdn.net",
+      "blob:",
+      "https://content.jwplatform.com",
+      "https://maps.googleapis.com",
+      "https://purecatamphetamine.github.io",
+      "https://accounts.google.com",
+      "https://*.weavy.io",
+      "https://www.googletagmanager.com/*",
+      "https://www.googletagmanager.com",
+      "https://www.clarity.ms/*",
+      "https://www.clarity.ms",
+      "https://*.clarity.ms"
+    ],
+    "font-src": [
+      "'self'",
+      "data:",
+      "https://fonts.gstatic.com",
+      "https://cdn.jsdelivr.net"
+    ],
+    "media-src": [
+      "'self'",
+      "*.wltim-stage.pcstaging.in"
+    ],
+    "upgrade-insecure-requests": ""
+  }
+}

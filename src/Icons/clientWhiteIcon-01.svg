@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="20" height="20">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: 3.5px;
+      }
+
+      .cls-2 {
+        stroke-width: 3.5px;
+      }
+
+      .cls-2, .cls-3, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        stroke-width: 3.5px;
+      }
+
+      .cls-5 {
+        stroke-width: 3.5px;
+      }
+
+      .cls-6 {
+        stroke-width: 3.5px;
+      }
+    </style>
+  </defs>
+  <g id="g1749">
+    <path id="path1730" class="cls-4" d="m54.51,53.38H5.49"/>
+    <path id="path1731" class="cls-4" d="m30,53.22v-11.29"/>
+    <path id="path1732" class="cls-5" d="m33.38,52.56c0,1.86-1.51,3.38-3.38,3.38s-3.38-1.51-3.38-3.38,1.51-3.38,3.38-3.38,3.38,1.51,3.38,3.38Z"/>
+    <path id="path1734" class="cls-4" d="m30,4.69c-8.38,0-15.19,6.81-15.19,15.19,0,4.87,2.37,9.13,5.94,11.9-4.59,2.99-7.56,8.06-9.41,13.44h37.31c-1.74-5.42-4.56-10.61-9.03-13.72,3.36-2.78,5.56-6.93,5.56-11.62,0-8.38-6.81-15.19-15.19-15.19h0Z"/>
+  </g>
+  <g id="g1720">
+    <g id="g1596">
+      <path id="path1594" class="cls-1" d="m53.34,53.1H6.66"/>
+      <path id="path1595" class="cls-1" d="m30,52.95v-10.75"/>
+      <path id="path1099" class="cls-6" d="m33.38,52.56c0,1.86-1.51,3.38-3.38,3.38s-3.38-1.51-3.38-3.38,1.51-3.38,3.38-3.38,3.38,1.51,3.38,3.38Z"/>
+    </g>
+    <g id="g1717">
+      <path id="path966" class="cls-3" d="m21.87,30.98c-5.3,2.82-8.52,8.42-10.52,14.25h37.31c-1.83-5.71-4.82-11.22-9.7-14.25-4.92-.21-11.1,0-17.09,0Z"/>
+      <path id="path710" class="cls-2" d="m45.17,19.86c0,8.38-6.8,15.17-15.17,15.17s-15.17-6.8-15.17-15.17c0-8.38,6.8-15.17,15.17-15.17,8.38,0,15.17,6.8,15.17,15.17Z"/>
+    </g>
+  </g>
+</svg>

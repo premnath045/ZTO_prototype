@@ -1,0 +1,33 @@
+:root {
+  --x-button-primary:#0F1035;
+  --x-button-unfilledcolor:#DCF2F1;
+}
+.simple-button {
+  display: flex;
+  font-size: 16px;
+  height: 48px;
+  min-width: 150px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  white-space: nowrap;
+  width: 98%;
+  padding: 0 8px;
+}
+.simple-button-icon {
+  width: 20px;
+  margin-right: 6px;
+}
+
+.primary {
+  background-color: var(--x-button-primary);
+  color: white;
+}
+.primary-unfilled {
+  background-color: transparent;
+  /* border: 1px solid var(--x-button-primary); */
+  /* color: var(--x-button-unfilledcolor) !important; */
+}
+.primary-unfilled > img {
+  filter: invert(38%) sepia(60%) saturate(800%) hue-rotate(48deg) brightness(85%) contrast(104%);
+}
