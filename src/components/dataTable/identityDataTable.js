@@ -11,7 +11,7 @@ function IdentityDataTable({ setTotalRows }) {
   
     useEffect(() => {
   
-      // Create columns based on data structure
+      // Create columns based on identity data structure
       const cols = Object.keys(identityCollection[0]).map((field) => ({
         field,
         headerName: field,
