@@ -31,17 +31,6 @@ export default [
     [hierarchicalName.name]: Yup.string().required(`${hierarchicalName.requiredErrorMsg}`),
     [deviceCategory.name]: Yup.string().required(`${deviceCategory.requiredErrorMsg}`),
 
-    
-    // [zipcode.name]: Yup.string()
-    //   .required(`${zipcode.requiredErrorMsg}`)
-    //   .test(
-    //     'len',
-    //     `${zipcode.invalidErrorMsg}`,
-    //     val => val && val.length === 5
-    //   ),
-    // [country.name]: Yup.string()
-    //   .nullable()
-    //   .required(`${country.requiredErrorMsg}`)
   }),
   Yup.object().shape({
     [certificateSerialNumber.name]: Yup.string().required(`${certificateSerialNumber.requiredErrorMsg}`),
@@ -50,36 +39,37 @@ export default [
       .required(`${certificateTemplateName.requiredErrorMsg}`),
     //   .matches(visaRegEx, cardNumber.invalidErrorMsg),
 
-    [creationTimestamp.name]: Yup.string()
-      .nullable()
-      .required(`${creationTimestamp.requiredErrorMsg}`)
-      .test('createDate', creationTimestamp.invalidErrorMsg, val => {
-        if (val) {
-          const startDate = new Date();
-          const endDate = new Date(2050, 12, 31);
-          if (moment(val, moment.ISO_8601).isValid()) {
-            return moment(val).isBetween(startDate, endDate);
-          }
-          return false;
-        }
-        return false;
-      }),
+    // [creationTimestamp.name]: Yup.string()
+    //   .nullable()
+    //   .required(`${creationTimestamp.requiredErrorMsg}`)
+    //   .test('createDate', creationTimestamp.invalidErrorMsg, val => {
+    //     if (val) {
+    //       const startDate = new Date();
+    //       const endDate = new Date(2050, 12, 31);
+    //       if (moment(val, moment.ISO_8601).isValid()) {
+    //         return moment(val).isBetween(startDate, endDate);
+    //       }
+    //       return false;
+    //     }
+    //     return false;
+    //   }),
 
 
-    [expiryDate.name]: Yup.string()
-      .nullable()
-      .required(`${expiryDate.requiredErrorMsg}`)
-      .test('expDate', expiryDate.invalidErrorMsg, val => {
-        if (val) {
-          const startDate = new Date();
-          const endDate = new Date(2050, 12, 31);
-          if (moment(val, moment.ISO_8601).isValid()) {
-            return moment(val).isBetween(startDate, endDate);
-          }
-          return false;
-        }
-        return false;
-      }),
+    // [expiryDate.name]: Yup.string()
+    //   .nullable()
+    //   .required(`${expiryDate.requiredErrorMsg}`)
+    //   .test('expDate', expiryDate.invalidErrorMsg, val => {
+    //     if (val) {
+    //       const startDate = new Date();
+    //       const endDate = new Date(2050, 12, 31);
+    //       if (moment(val, moment.ISO_8601).isValid()) {
+    //         return moment(val).isBetween(startDate, endDate);
+    //       }
+    //       return false;
+    //     }
+    //     return false;
+    //   }),
+
     [uniqueCertificateNumber.name]: Yup.string()
       .required(`${uniqueCertificateNumber.requiredErrorMsg}`)
       .test('len', `${uniqueCertificateNumber.invalidErrorMsg}`, val => val && val.length === 3)
