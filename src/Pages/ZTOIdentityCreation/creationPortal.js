@@ -4,7 +4,7 @@ import CreationTableHeader from '../../components/TableHeader/creationTableHeade
 import IdentityCreationTabs from '../../components/TableHeader/creationTabs';
 import ScanDataTable from '../../components/dataTable/scanDataTable';
 import IdentityDataTable from '../../components/dataTable/identityDataTable';
-import FullviewPopupModal from '../../components/fullScreenPopup/popup';
+import  ManualCreationPopup from '../../components/fullScreenPopup/manualCreationPopup';
 import AvailableIdentityTable from '../../components/dataTable/availableIdentityTable';
 
 function IdentityCreationPortal() {
@@ -49,7 +49,7 @@ function IdentityCreationPortal() {
 
         {/* Condition to show full screen popup modal */}
         {showModal && (
-          <FullviewPopupModal
+          <ManualCreationPopup
             showModal={showModal}
             closeModal={closeModal}
             mapSearch={mapSearch}
