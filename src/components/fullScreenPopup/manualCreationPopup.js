@@ -233,7 +233,7 @@ function ManualCreationPopup({closeModal}) {
   return (
     <React.Fragment>
         <div className ="flex w-screen h-screen fixed left-0 top-0 justify-center items-center px-16 py-20 font-medium bg-neutral-700 bg-opacity-40 max-md:px-5">
-            <div className ="flex flex-col justify-center px-7 py-8 max-w-full bg-white w-[756px] max-md:px-5 max-md:mt-10">
+            <div className="flex flex-col justify-center px-7 py-8 max-w-full bg-white w-[756px] max-md:px-5 max-md:mt-10">
                 <div className="flex flex-col pb-5 border-b border-stone-300 max-md:max-w-full"> 
                     <div className="flex justify-between items-center px-5 py-3.5 text-xl bg-slate-300 text-zinc-800 max-md:flex-wrap max-md:pr-5 max-md:max-w-full"> 
                         <div>Identity Creation Portal</div>
@@ -264,7 +264,7 @@ function ManualCreationPopup({closeModal}) {
                         onSubmit={_handleSubmit}
                     >
                         {({ isSubmitting }) => (
-                        <Form id={formId}>
+                        <Form id={formId} className='max-h-[400px] overflow-y-auto overflow-x-hidden'>
                             {_renderStepContent(activeStep)}
 
                             <div className={classes.buttons}>
@@ -281,7 +281,7 @@ function ManualCreationPopup({closeModal}) {
                                 color="primary"
                                 className={classes.button}
                                 >
-                                {isLastStep ? 'Place order' : 'Next'}
+                                {isLastStep ? 'Generate' : 'Next'}
                                 </Button>
                                 {isSubmitting && (
                                 <CircularProgress
