@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import NotFound from '../Pages/404';
 import ZTODashboard from '../Pages/ZTODashboard/index.js';
 import IdentityPortal from '../Pages/ZTOIdentity/identityPortal.js';
+import IdentityCreationPortal from '../Pages/ZTOIdentityCreation/creationPortal.js';
 
 export default function MainRouter() {
   const [loggedInUser, setLoggedInUser] = useState();
@@ -38,6 +39,13 @@ export default function MainRouter() {
           path='identity-portal'
           element={
             <IdentityPortal />
+          }
+        />
+
+        <Route
+          path='identity-creation'
+          element={
+            <IdentityCreationPortal />
           }
         />
 

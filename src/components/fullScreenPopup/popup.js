@@ -1,6 +1,19 @@
 import React, {useEffect, useState} from 'react';
 
-function FullviewPopupModal({showModal, closeModal}) {
+function FullviewPopupModal({showModal, closeModal, mapSearch}) {
+
+  const [selectedFilters, setSelectedFilters] = useState([]); 
+
+  // Select handler
+  const handleSelect = (filter) => {
+    setSelectedFilters(prev => ({...prev, [filter]: true})); 
+  }
+
+  // Submit handler
+  // const handleSubmit = () => {
+  //   props.setSelectedFilters(selectedFilters);
+  // }
+
   return (
     <div className="flex w-screen h-screen fixed left-0 top-0 justify-center items-center px-16 py-20 font-medium bg-neutral-700 bg-opacity-40 max-md:px-5">
       <div className="flex flex-col justify-center px-7 py-8 max-w-full bg-white w-[756px] max-md:px-5 max-md:mt-10">
@@ -32,19 +45,49 @@ function FullviewPopupModal({showModal, closeModal}) {
           </div>
           <div className="flex flex-wrap gap-5 justify-between content-start pr-3.5 mx-5 mt-8 text-base text-black max-md:mr-2.5">
             <div className="flex gap-2.5 p-4 bg-stone-50">
-                <input className="shrink-0 w-5 aspect-square" type="checkbox"/>
+                <input className="shrink-0 w-5 aspect-square" type="checkbox" value="IP Address"
+                  // onChange={(e) => {
+                  //   if(e.target.checked) {
+                  //     setSelectedFilters(prev => [...prev, e.target.value])  
+                  //   } else {
+                  //     setSelectedFilters(prev => prev.filter(f => f !== e.target.value))
+                  //   }
+                  // }}
+                  onChange={(e) => handleSelect(e.target.value)}
+
+                />
                 <div className="flex-auto">IP Address</div>
             </div>
             <div className="flex gap-2.5 p-4 bg-stone-50">
-                <input className="shrink-0 w-5 aspect-square" type="checkbox"/>
+                <input className="shrink-0 w-5 aspect-square" type="checkbox" value="MAC Address" 
+                  // onChange={(e) => {
+                  //   if(e.target.checked) {
+                  //     setSelectedFilters(prev => [...prev, e.target.value])  
+                  //   } else {
+                  //     setSelectedFilters(prev => prev.filter(f => f !== e.target.value))
+                  //   }
+                  // }}
+                  onChange={(e) => handleSelect(e.target.value)}
+                  
+                />
                 <div className="flex-auto">MAC Address</div>
             </div>
             <div className="flex gap-2.5 p-4 whitespace-nowrap bg-stone-50">
-                <input className="shrink-0 w-5 aspect-square" type="checkbox"/>
+                <input className="shrink-0 w-5 aspect-square" type="checkbox" value="Serial Number" 
+                  // onChange={(e) => {
+                  //   if(e.target.checked) {
+                  //     setSelectedFilters(prev => [...prev, e.target.value])  
+                  //   } else {
+                  //     setSelectedFilters(prev => prev.filter(f => f !== e.target.value))
+                  //   }
+                  // }}
+                  onChange={(e) => handleSelect(e.target.value)}
+
+                />
             <div className="grow">Serial Number</div>
             </div>
           </div>
-          <div /*onClick={mapSearch}*/ className="justify-center self-end px-10 py-2.5 mt-20 mr-5 text-sm text-center text-white whitespace-nowrap bg-slate-400 max-md:px-5 max-md:mt-10 max-md:mr-2.5">
+          <div onClick={() => mapSearch(selectedFilters)} className="justify-center self-end px-10 py-2.5 mt-20 mr-5 text-sm text-center text-white whitespace-nowrap bg-slate-400 max-md:px-5 max-md:mt-10 max-md:mr-2.5">
             Search
           </div>
         </div>

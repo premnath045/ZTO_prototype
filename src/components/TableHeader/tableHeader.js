@@ -1,7 +1,15 @@
 import React, {useEffect, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 function TableHeader({openModal, totalRows, setSelectedTab}) {
+
+    const navigate = useNavigate();
+  
+    const createBtnClick = () => {
+      navigate('/identity-creation'); 
+    };
+  
     return (
       <div className="flex gap-5 justify-between px-5 text-center whitespace-nowrap max-md:flex-wrap">
         <div className="flex gap-5 justify-between pt-5 text-base text-zinc-800">
@@ -33,6 +41,14 @@ function TableHeader({openModal, totalRows, setSelectedTab}) {
               className="shrink-0 self-start w-5 aspect-square"
             />
             <div onClick={openModal} className="grow">Search Certificates</div>
+          </div>
+          <div onClick={createBtnClick} className="flex gap-1.5 px-1.5 py-2.5 text-sm font-medium text-center text-white whitespace-nowrap border-t border-r border-l border-solid bg-slate-500 border-stone-300">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f886069d16bf1c0660355e2117fa598c1cb4b65129995c86375c5731bee413f1?"
+              className="shrink-0 self-start w-5 aspect-square"
+            />
+            <div className="grow">Create New Identity</div>
           </div>
         </div>
       </div>

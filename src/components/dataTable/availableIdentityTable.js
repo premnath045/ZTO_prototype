@@ -4,7 +4,7 @@ import csvData from '../../Assets/files/Siesta_Asset-data_hosts.csv';
 import Papa from 'papaparse';
 
 
-function AvailableIdentityTable({setTotalRows}) {
+function AvailableIdentityTable({setTotalRows, filters}) {
   const [columns, setColumns] = useState([]);
   const [rows, setRows] = useState([]);
 
@@ -48,6 +48,16 @@ function AvailableIdentityTable({setTotalRows}) {
                   }}
                   pageSizeOptions={[5, 10]}
                   checkboxSelection
+                  // getRowClassName={(params) => {
+                  //   // Check if filter value matches row value 
+                  //   if(filters.includes(params.row.ip)) {
+                  //     // Return class name for green background
+                  //     return 'greenRow';  
+                  //   }
+          
+                  //   // Return class name for red background
+                  //   return 'redRow';
+                  // }}
               />
           </div>
       </div>
