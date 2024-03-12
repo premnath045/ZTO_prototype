@@ -5,7 +5,7 @@ import Papa from 'papaparse';
 import identityCollection from '../../deviceIdentity/identityCollection';
 
 
-function IdentityDataTable({ setTotalRows }) {
+function IdentityDataTable({setTotalRows, filters}) {
     const [columns, setColumns] = useState([]);
     const [rows, setRows] = useState([]);
   
@@ -37,6 +37,13 @@ function IdentityDataTable({ setTotalRows }) {
             }}
             pageSizeOptions={[5, 10]}
             checkboxSelection
+
+            // getRowClassName={(params) => {
+            //   if (filters && filters.includes(params.row.ip)) { // Check if filters exists
+            //     return 'highlightRow';
+            //   }
+            //   return '';
+            // }}
           />
         </div>
       </div>

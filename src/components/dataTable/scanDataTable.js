@@ -4,7 +4,7 @@ import csvData from '../../Assets/files/Siesta_Asset-data_hosts.csv';
 import Papa from 'papaparse';
 
 
-function ScanDataTable({setTotalRows}) {
+function ScanDataTable({setTotalRows, filters}) {
   const [columns, setColumns] = useState([]);
   const [rows, setRows] = useState([]);
 //   const [totalRows, setTotalRows] = useState(0);
@@ -33,6 +33,21 @@ function ScanDataTable({setTotalRows}) {
 
     fetchData();
 
+    console.log('selected filters', filters);
+    console.log('rows', rows);
+
+
+    // Filter rows based on IP Address (handling spaces)
+    const filteredRows = rows.filter(row => {
+      return row["IP Address"] === filters["IP Address"]; 
+    });
+
+    // Get filtered column values (accessing 'IP Address' property)
+    const ipAddresses = filteredRows.map(row => row["IP Address"]); 
+
+
+    console.log('IP addresses', ipAddresses);
+
   }, []);
 
     return (
@@ -49,6 +64,13 @@ function ScanDataTable({setTotalRows}) {
                   }}
                   pageSizeOptions={[5, 10]}
                   checkboxSelection
+
+                  // getRowClassName={(params) => {
+                  //   if (filters && filters.includes(params.row.ip)) { // Check if filters exists
+                  //     return 'highlightRow';
+                  //   }
+                  //   return '';
+                  // }}
               />
           </div>
       </div>

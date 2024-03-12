@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import AdminLayout from '../../components/admin-layout';
-import TableHeader from '../../components/TableHeader/tableHeader';
+import CreationTableHeader from '../../components/TableHeader/creationTableHeader';
+import IdentityCreationTabs from '../../components/TableHeader/creationTabs';
 import ScanDataTable from '../../components/dataTable/scanDataTable';
 import IdentityDataTable from '../../components/dataTable/identityDataTable';
 import FullviewPopupModal from '../../components/fullScreenPopup/popup';
 import AvailableIdentityTable from '../../components/dataTable/availableIdentityTable';
 
-function IdentityPortal() {
+function IdentityCreationPortal() {
   const [totalRows, setTotalRows] = useState(0);
   const [selectedTab, setSelectedTab] = useState('discovered');
   const [showModal, setShowModal] = useState(false);
@@ -28,10 +29,14 @@ function IdentityPortal() {
   return (
     <AdminLayout>
       <div className="p-2">
-        <TableHeader
+        <CreationTableHeader
           openModal={openModal}
           totalRows={totalRows}
           setSelectedTab={(tab) => setSelectedTab(tab)}
+        />
+
+        <IdentityCreationTabs 
+            openModal={openModal}
         />
 
         {/* Conditional rendering of identity portal table components */}
@@ -40,9 +45,6 @@ function IdentityPortal() {
         )}
         {selectedTab === 'identities' && (
           <IdentityDataTable setTotalRows={setTotalRows} filters={filters} />
-        )}
-        {selectedTab === 'availableidentity' && (
-          <AvailableIdentityTable setTotalRows={setTotalRows} setFilters={setFilters} />
         )}
 
         {/* Condition to show full screen popup modal */}
@@ -58,4 +60,4 @@ function IdentityPortal() {
   );
 }
 
-export default IdentityPortal;
+export default IdentityCreationPortal;
